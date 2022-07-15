@@ -1,0 +1,161 @@
+{
+  "revision_id": "fe2ac759a7c77c4c7f6b514e7089fe3b83f54f16534e906f27c2f614151b397d",
+  "name": "myhaproxy",
+  "run_list": [
+    "recipe[myhaproxy::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "build-essential": {
+      "version": "8.2.1",
+      "identifier": "4b9d5c72796184085681d3eefd625c90b79530a8",
+      "dotted_decimal_identifier": "21283643636408708.2346915420110178.101776625053864",
+      "cache_key": "build-essential-8.2.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/build-essential/versions/8.2.1/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/build-essential/versions/8.2.1/download",
+        "version": "8.2.1"
+      }
+    },
+    "haproxy": {
+      "version": "8.3.0",
+      "identifier": "1a4f760772edefd7d385930d18c283a6bcbbc75d",
+      "dotted_decimal_identifier": "7405717744184815.60749690644011202.144752154232669",
+      "cache_key": "haproxy-8.3.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/haproxy/versions/8.3.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/haproxy/versions/8.3.0/download",
+        "version": "8.3.0"
+      }
+    },
+    "mingw": {
+      "version": "2.1.4",
+      "identifier": "37b76d310d308cc54853dcc88ec386023bfb02ae",
+      "dotted_decimal_identifier": "15682803321352332.55530095435615939.147344154362542",
+      "cache_key": "mingw-2.1.4-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/mingw/versions/2.1.4/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/mingw/versions/2.1.4/download",
+        "version": "2.1.4"
+      }
+    },
+    "myhaproxy": {
+      "version": "1.0.0",
+      "identifier": "629b36d56c06f4b12aabc8af942fa06fca006fa7",
+      "dotted_decimal_identifier": "27755207528810228.49867988172510255.176401990840231",
+      "source": "../cookbooks/myhaproxy",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": null,
+        "working_tree_clean": true,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/myhaproxy"
+      }
+    },
+    "seven_zip": {
+      "version": "4.2.2",
+      "identifier": "a97443e4baa8bb56ef7aef7e085c8985fafa8423",
+      "dotted_decimal_identifier": "47697106013169851.24470159280179292.151208534377507",
+      "cache_key": "seven_zip-4.2.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/seven_zip/versions/4.2.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/seven_zip/versions/4.2.2/download",
+        "version": "4.2.2"
+      }
+    },
+    "yum-epel": {
+      "version": "4.5.0",
+      "identifier": "dad6a6c002700a1ae06443e61afaf9abf5b6e2ab",
+      "dotted_decimal_identifier": "61597556597223434.7565070634982138.274516957127339",
+      "cache_key": "yum-epel-4.5.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/yum-epel/versions/4.5.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/yum-epel/versions/4.5.0/download",
+        "version": "4.5.0"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "build-essential",
+        "= 8.2.1"
+      ],
+      [
+        "haproxy",
+        "= 8.3.0"
+      ],
+      [
+        "mingw",
+        "= 2.1.4"
+      ],
+      [
+        "myhaproxy",
+        ">= 0.0.0"
+      ],
+      [
+        "seven_zip",
+        "= 4.2.2"
+      ],
+      [
+        "yum-epel",
+        "= 4.5.0"
+      ]
+    ],
+    "dependencies": {
+      "build-essential (8.2.1)": [
+        [
+          "seven_zip",
+          ">= 0.0.0"
+        ],
+        [
+          "mingw",
+          ">= 1.1.0"
+        ]
+      ],
+      "haproxy (8.3.0)": [
+        [
+          "build-essential",
+          ">= 8.0.1"
+        ],
+        [
+          "yum-epel",
+          ">= 0.0.0"
+        ]
+      ],
+      "mingw (2.1.4)": [
+        [
+          "seven_zip",
+          ">= 0.0.0"
+        ]
+      ],
+      "myhaproxy (1.0.0)": [
+        [
+          "haproxy",
+          "~> 8.3.0"
+        ]
+      ],
+      "seven_zip (4.2.2)": [
+
+      ],
+      "yum-epel (4.5.0)": [
+
+      ]
+    }
+  }
+}
